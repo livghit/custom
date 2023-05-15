@@ -2,7 +2,7 @@ local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "tailwindcss", "intelephense", "tsserver"}
+local servers = { "html", "cssls", "tailwindcss", "intelephense", "tsserver", "gopls" , "rust_analyzer", "csharp_ls"}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -11,4 +11,14 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+lspconfig.elixirls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "/home/li/.config/nvim/lua/custom/elixir-ls/language_server.sh" },
+}
+lspconfig.rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "/home/li/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rust-analyzer" },
+}
 
