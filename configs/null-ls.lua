@@ -8,7 +8,8 @@ local lint = null_ls.builtins.diagnostics
 local sources = {
    formatting.prettier,
    formatting.stylua,
-
+   formatting.gofmt,
+    formatting.phpcsfixer,
    lint.shellcheck,
 }
 
