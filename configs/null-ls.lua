@@ -9,7 +9,9 @@ local sources = {
    formatting.prettier,
    formatting.stylua,
    formatting.gofmt,
-    formatting.phpcsfixer,
+   formatting.phpcsfixer,
+   formatting.csharpier,
+   formatting.autoflake,
    lint.shellcheck,
 }
 

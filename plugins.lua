@@ -60,5 +60,8 @@ local plugins = {
       }
     end,
   },
+  {
+    'windwp/nvim-autopairs',
+  }
 }
 return plugins
