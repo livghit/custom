@@ -9,7 +9,12 @@ M.abc = {
     ["<S-e>"] = {
       ":lua require('harpoon.ui').toggle_quick_menu() <CR>",
       "Harpoon show files"
+    },
+ ["<leader>gs"] = {
+      ":UndotreeToggle<CR>",
+      "Toggle Undotree"
     }
+
   }
 }
 

@@ -74,13 +74,17 @@ local plugins = {
       "rcarriga/nvim-notify",
     },
   },
-  -- configs for nvim notify 
+  -- configs for nvim notify
   {
     "rcarriga/nvim-notify",
     opts = {
       -- add any options here
       background_colour = "#123450",
     },
+  },
+  {
+    "mbbill/undotree",
+    lazy = false,
   },
 }
 return plugins
