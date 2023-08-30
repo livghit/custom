@@ -80,7 +80,6 @@ local plugins = {
     opts = {
       -- add any options here
       background_colour = "#123450",
-
     },
   },
 }
