@@ -61,7 +61,27 @@ local plugins = {
     end,
   },
   {
-    'windwp/nvim-autopairs',
-  }
+    "windwp/nvim-autopairs",
+  },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+  },
+  -- configs for nvim notify 
+  {
+    "rcarriga/nvim-notify",
+    opts = {
+      -- add any options here
+      background_colour = "#123450",
+
+    },
+  },
 }
 return plugins
