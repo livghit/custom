@@ -12,6 +12,14 @@ M.abc = {
       ":UndotreeToggle<CR>",
       "Toggle Undotree",
     },
+    ["<C-j>"] = {
+      ":lua require('harpoon.ui').nav_prev()<CR>",
+      "Harpoon go to prev",
+    },
+    ["<C-k>"] = {
+      ":lua require('harpoon.ui').nav_next()<CR>",
+      "Harpoon go to prev",
+    },
   },
 }
 

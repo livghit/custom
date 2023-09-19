@@ -3,13 +3,15 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "astro-language-server",
+        "vue-language-server",
+        "gopls",
         "intelephense",
         "tailwindcss-language-server",
         "typescript-language-server ",
         "html-lsp",
         "css-lsp",
         "csharp_lsp",
-        "java_language_server",
         "prettier",
       },
     },
@@ -64,27 +66,23 @@ local plugins = {
     "windwp/nvim-autopairs",
   },
   {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    opts = {
-      -- add any options here
-    },
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-    },
-  },
-  -- configs for nvim notify
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      -- add any options here
-      background_colour = "#123450",
-    },
-  },
-  {
     "mbbill/undotree",
     lazy = false,
   },
+  {
+    "joerdav/templ.vim",
+    lazy = false,
+  },
+  {
+    "ThePrimeagen/refactoring.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("refactoring").setup()
+    end,
+  },
 }
+
 return plugins
