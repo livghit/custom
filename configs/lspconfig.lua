@@ -3,8 +3,19 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
 
-local servers =
-  { "html", "cssls", "tailwindcss", "intelephense", "tsserver", "gopls", "pyright", "csharp_ls", "lua_ls" }
+local servers = {
+  "html",
+  "cssls",
+  "tailwindcss",
+  "intelephense",
+  "tsserver",
+  "gopls",
+  "pyright",
+  "csharp_ls",
+  "lua_ls",
+  "sqlls",
+  "arduino_language_server",
+}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -21,6 +32,8 @@ lspconfig.elixirls.setup {
 }
 
 lspconfig.astro.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
   cmd = {
     "astro-ls",
     "--stdio",
